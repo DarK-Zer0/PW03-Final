@@ -1,0 +1,49 @@
+[Name of Project Here]
+
+I. Milestone 1
+	1. Home Page
+		A. Description of project
+		B. What company does/Services provided
+		C. Our advantage/customer attraction method
+	2. Sign Up Page
+		A. Form Fields
+			a. Form Type*
+				i. Buyers
+				ii. Sellers
+				iii. Admin(s)
+			b. First name
+			c. Last name
+			d. Email ID
+			e. Username
+		B. Form Validation
+	3. Database Schema
+		A. Store data from Sign Up Page
+			a. Encrypt Passwords when storing
+	4. Credit Card Input
+		A. Form Fields
+			a. Name
+			b. Credit Card Type
+			c. Credit Card Number
+			d. Expiration Date
+			e. Address
+			f. Biling Address
+			g. Phone Number
+		B. Detecting Credit Card Type
+			a. IIN's (Issuer Identification Number)
+				a. Mastercard: 51-55 (first 2 digits)
+				b. Visa: 4 (first digit)
+				c. American Expression: 34 of 37 (first 2 digits)
+				d. Discover: 6000-6599 (first 4 digits)
+II. Milestone 2
+	1. Redirect to corresponding Login Page after Sign Up
+		A. Based on Form Type selected on Sign Up Page
+		B. Form Fields
+			a. Email ID
+			b. Password
+			c. (Forgot Password)
+	2. User Session
+		A. Store a cookie with `session_id` inside
+		B. PHP uses that cookie to determine what corresponds to the user
+III. 3rd Milestone
+	A. To be decided...
+
