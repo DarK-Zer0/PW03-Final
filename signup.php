@@ -35,7 +35,7 @@
 			
 			<div class="input-check">
 				<input type="checkbox" id="accept-terms"/>
-				<label for="accept-terms">I accept the <a href="#" class="popup-link"data-popup="terms" onclick="showPopup('terms')">Terms of Use</a> and <a href="#" class="popup-link" data-popup="privacy" onclick="showPopup('privacy')">Privacy Policy</a></label>
+				<label for="accept-terms">I accept the <a href="#" class="popup-link"data-popup="terms" onclick="showTerms()">Terms of Use</a> and <a href="#" class="popup-link" data-popup="privacy" onclick="showPrivacy()">Privacy Policy</a></label>
 			</div>
 			
 			

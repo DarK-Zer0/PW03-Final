@@ -61,6 +61,26 @@ function hidePopup(popupType) {
   popupElement.classList.add('popup-hidden');
 }
 
+function showTerms()	{
+  const termsPopup = document.getElementById('popup-terms');
+  if (termsPopup.classList.contains('popup-displayed')) {
+	hidePopup('terms');
+  } else {
+	hidePopup('privacy');
+	showPopup('terms');
+  }
+}
+
+function showPrivacy()	{
+  const privacyPopup = document.getElementById('popup-privacy');
+  if (privacyPopup.classList.contains('popup-displayed')) {
+    hidePopup('privacy');
+  } else {
+    hidePopup('terms');
+    showPopup('privacy');
+  }
+}
+
 const popupLinks = document.querySelectorAll('.popup-link');
 
 popupLinks.forEach((link) => {
