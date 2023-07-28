@@ -22,18 +22,17 @@ I. Milestone 1
 	4. Credit Card Input
 		A. Form Fields
 			a. Name
-			b. Credit Card Type
-			c. Credit Card Number
-			d. Expiration Date
-			e. Address
-			f. Biling Address
-			g. Phone Number
+			b. Credit Card Number
+			c. Expiration Date
+			d. Address
+			e. Biling Address
+			f. Phone Number
 		B. Detecting Credit Card Type
-			a. IIN's (Issuer Identification Number)
+			a. IINs (Issuer Identification Number)
 				a. Mastercard: 51-55 (first 2 digits)
 				b. Visa: 4 (first digit)
 				c. American Expression: 34 of 37 (first 2 digits)
-				d. Discover: 6000-6599 (first 4 digits)
+				d. Discover: 60-65 (first 2 digits)
 II. Milestone 2
 	1. Redirect to corresponding Login Page after Sign Up
 		A. Based on Form Type selected on Sign Up Page
