@@ -29,6 +29,12 @@
 	color: grey;
 }
 
+.error-text {
+	color: red;
+	font-size: 12pt;
+	display: none;
+}
+
 .input-line	{
 	margin-bottom: 15px;
 	position: relative;
@@ -61,6 +67,36 @@
 	position: relative;
 	color: black;
 }
+
+/* Used for Terms of Use and Privacy Policy */
+
+.popup-displayed	{
+	display: block;
+}
+
+.popup-hidden {
+	display: none;
+}
+
+.popup	{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #FAF0E6;
+	border-left: 5px solid #66CDAA;
+	border-right: 5px solid #66CDAA;
+	padding: 20px;
+	width: max-content;
+	z-index: 100;
+}
+
+.close-button	{
+	display: block;
+	margin-top: 10px;
+	background-color: white;
+}
+
 
 /* -----Index Styles----- */
 #index {
