@@ -14,8 +14,9 @@
 	flex-direction: column;
 	align-items: center;
 	margin: 0 auto;
-	/* margin-top: 20px; */
-	border: 5px solid #66CDAA;
+	margin-top: 20px;
+	border-left: 5px solid #66CDAA;
+	border-right: 5px solid #66CDAA;
 	border-radius: 5px;
 	padding: 5px 10px;
 }
@@ -29,3 +30,38 @@
 .logsign-body	{
 	color: grey;
 }
+
+.input-line	{
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.input-line label 	{
+	position: absolute;
+	color: #777;
+	transition: opacity 0.2s ease-in;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.input-line input:focus +label,
+.input-line input:not(:placeholder-shown)+label	{
+	background-color: #fff;
+	opacity: 0;
+	left: 0;
+}
+
+.button	{
+	background-color: #66CDAA;
+	color: white;
+	font-weight: bold;
+}
+
+.input-check {
+	margin-bottom: 15px;
+	position: relative;
+	color: black;
+}
+
+
