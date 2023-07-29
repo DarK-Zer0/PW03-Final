@@ -29,3 +29,90 @@ function setCCImage(ccNumber) {
     const ccImgContainer = document.querySelector('.ccImg'); // Needs ccImg class added to css
     ccImgContainer.style.backgroundImage = ccImgs[ccImage];
 }
+
+// Register page button
+function register() {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const errorText = document.getElementById('error-text');
+
+    if (password !== confirmPassword) {
+        errorText.textContent = 'Passwords do not match.';
+        errorText.style.display = 'block';
+    } else {
+        // Passwords match, logging a sign up
+		// TO DO: Add actual Sign-up functionality here.
+        console.log('Sign up');
+        errorText.style.display = 'none';
+    }
+}
+
+// Popup function for Terms of Use and Privacy Policy
+
+function showPopup(popupType) {
+  const popupElement = document.getElementById(`popup-${popupType}`);
+  popupElement.classList.remove('popup-hidden');
+  popupElement.classList.add('popup-displayed');
+}
+
+function hidePopup(popupType) {
+  const popupElement = document.getElementById(`popup-${popupType}`);
+  popupElement.classList.remove('popup-displayed');
+  popupElement.classList.add('popup-hidden');
+}
+
+function showTerms()	{
+  const termsPopup = document.getElementById('popup-terms');
+  if (termsPopup.classList.contains('popup-displayed')) {
+	hidePopup('terms');
+  } else {
+	hidePopup('privacy');
+	showPopup('terms');
+  }
+}
+
+function showPrivacy()	{
+  const privacyPopup = document.getElementById('popup-privacy');
+  if (privacyPopup.classList.contains('popup-displayed')) {
+    hidePopup('privacy');
+  } else {
+    hidePopup('terms');
+    showPopup('privacy');
+  }
+}
+
+const popupLinks = document.querySelectorAll('.popup-link');
+
+popupLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const popupType = link.getAttribute('data-popup');
+	
+	// Hide any currently displayed popup
+	const displayedPopup = document.querySelector('.popup-displayed');
+    if (displayedPopup) {
+      displayedPopup.classList.add('popup-hidden');
+      displayedPopup.classList.remove('popup-displayed');
+    }
+	
+    showPopup(popupType);
+  });
+});
+
+const closeButtons = document.querySelectorAll('.close-button');
+
+closeButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const popupType = button.getAttribute('data-popup');
+    hidePopup(popupType);
+  });
+});
+
+
+
+
+
+
+
+
+
