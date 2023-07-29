@@ -30,21 +30,129 @@ function setCCImage(ccNumber) {
     ccImgContainer.style.backgroundImage = ccImgs[ccImage];
 }
 
+//Delete
+//Get inputs from register form
+//function getElementById(id) {
+//    return document.getElementById(id);
+//}
+
+// Print error for the register page
+function printError(elementId, message) {
+    const errorElement = document.getElementById(elementId);
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+}
+
 // Register page button
 function register() {
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
-    const errorText = document.getElementById('error-text');
 
-    if (password !== confirmPassword) {
-        errorText.textContent = 'Passwords do not match.';
-        errorText.style.display = 'block';
-    } else {
-        // Passwords match, logging a sign up
-		// TO DO: Add actual Sign-up functionality here.
-        console.log('Sign up');
-        errorText.style.display = 'none';
+	var username = document.querySelector("#username").value;
+    var email = document.querySelector("#email").value;
+    var password = document.querySelector("#password").value;
+    var confirmPassword = document.querySelector("#confirmPassword").value;
+    var acceptTerms = document.querySelector("#acceptTerms").checked; // True or false
+	
+	console.log(!username);
+	console.log(!email );
+	console.log(!password );
+	console.log(!confirmPassword );
+	console.log(!acceptTerms);
+		
+	
+	// DEBUG
+	// Check if the elements are found before accessing their properties
+    if (!username || !email || !password || !confirmPassword || !acceptTerms) {
+		console.log(username);
+		console.log(email);
+		console.log(password);
+		console.log(confirmPassword);
+		console.log(acceptTerms);
+        console.error("One or more elements not found in the DOM.");
+        return;
     }
+	
+    // Defining error variables with a default value
+    var usernameErr = emailErr = passwordErr = confirmPasswordErr = acceptTermsErr = passwordMatchErr = true;
+	
+	// Validate User Role
+	
+	const userRole = document.querySelector("#userRole").value;
+    if (userRole === "Select") {
+        printError("userRoleErr", "Please select a role");
+        userRoleErr = true;
+    } else {
+        userRoleErr = false;
+    }
+	
+	
+	// Validate username
+    if(username == "") {
+        printError("usernameErr", "Please enter your username");
+	} else {
+		usernameErr = false;	
+	}
+	// Validate email
+    if(email == "") {
+        printError("emailErr", "Please enter your email");
+	} else {
+		emailErr = false;	
+	}
+	
+	// Validate passwordErr
+    if(password == "") {
+        printError("passwordErr", "Please enter your password");
+	} else {
+		passwordErr = false;	
+	}
+	
+	// Validate confirmPasswordErr
+    if(confirmPassword == "") {
+        printError("confirmPasswordErr", "Please confirm your password");
+	} else if (confirmPassword == password) {
+		confirmPasswordErr = false;
+		passwordMatchErr = false;
+	} else	{
+		confirmPasswordErr = false;
+		printError("passwordMatchErr", "Passwords do not match");
+	}
+	
+	// Validate the acceptTermsErr checkbox
+	if(acceptTerms)	{
+		acceptTermsErr = false;
+	} else	{
+		printError("acceptTermsErr", "You must accept the terms to register");
+	}
+	
+	console.log("Before the || stuff");
+	console.log(usernameErr);
+	console.log(emailErr);
+	console.log(passwordErr);
+	console.log(confirmPasswordErr);
+	console.log(acceptTermsErr);
+	console.log(passwordMatchErr);
+	console.log(userRoleErr);
+		
+	if((usernameErr || emailErr || passwordErr || confirmPasswordErr || acceptTermsErr || passwordMatchErr || userRoleErr) === true)	{
+		console.log("One or more register errors");
+		return false;
+	} else {
+    console.log('Sign up');
+    // TO DO: Add actual Sign-up functionality here.
+	}
+}
+
+// Shows error text under the corresponding line
+function showErrorText(errorId, errorMessage) {
+    const errorText = document.getElementById(errorId);
+    errorText.textContent = errorMessage;
+    errorText.style.display = 'block';
+}
+
+// Resets error text
+function resetErrorText(errorId) {
+    const errorText = document.getElementById(errorId);
+    errorText.textContent = '';
+    errorText.style.display = 'none';
 }
 
 // Popup function for Terms of Use and Privacy Policy

@@ -13,30 +13,46 @@
 			<p class="logsign-body">Fill in the form to complete your account.</p>
 	
 			<div class="input-line">
-				<input type="text" required placeholder=""/>
-				<label for="input-text"> Username</label>
-			</div>
+            <input type="text" required placeholder="" id="username" />
+            <label for="username"> Username</label>
+            <span class="error-text" id="usernameErr"></span>
+        </div>
+
+        <div class="input-line">
+            <input type="text" required placeholder="" id="email" />
+            <label for="email"> Email Address</label>
+            <span class="error-text" id="emailErr"></span>
+        </div>
+
+        <div class="input-line">
+            <input type="text" required placeholder="" id="password" />
+            <label for="password"> Password</label>
+            <span class="error-text" id="passwordErr"></span>
+        </div>
+
+        <div class="input-line">
+            <input type="text" required placeholder="" id="confirmPassword" />
+            <label for="confirmPassword"> Confirm Password</label>
+            <span class="error-text" id="confirmPasswordErr"></span>
+			<span class="error-text" id="passwordMatchErr"></span>
+        </div>
 		
-			<div class="input-line">
-				<input type="text" required placeholder=""/>
-				<label for="input-text"> Email Address</label>
-			</div>
-			
-			<div class="input-line">
-				<input type="text" required placeholder="" id="password" required/>
-				<label for="input-text"> Password</label>
-			</div>
-			
-			<div class="input-line">
-				<input type="text" required placeholder="" id="confirm-password" required/>
-				<label for="input-text"> Confirm Password</label>
-				<p id="error-text" class="error-text"></p>
-			</div>
-			
-			<div class="input-check">
-				<input type="checkbox" id="accept-terms"/>
-				<label for="accept-terms">I accept the <a href="#" class="popup-link"data-popup="terms" onclick="showTerms()">Terms of Use</a> and <a href="#" class="popup-link" data-popup="privacy" onclick="showPrivacy()">Privacy Policy</a></label>
-			</div>
+		<div class="input-dropdown">
+            <select id="userRole">
+                <option value="Select">Select</option>
+                <option value="Seller">Seller</option>
+                <option value="Buyer">Buyer</option>
+                <option value="Admin">Admin</option>
+            </select>
+            <label for="userRole">Account Type</label>
+            <span id="userRoleErr"></span>
+        </div>
+		<br>
+        <div class="input-check">
+            <input type="checkbox" id="acceptTerms" />
+            <label for="acceptTerms">I accept the <a href="#" class="popup-link" data-popup="terms" onclick="showTerms()">Terms of Use</a> and <a href="#" class="popup-link" data-popup="privacy" onclick="showPrivacy()">Privacy Policy</a></label>
+            <span class="error-text" id="acceptTermsErr"></span>
+        </div>
 			
 			
 			<div class="button">
