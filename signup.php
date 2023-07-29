@@ -38,13 +38,13 @@
         </div>
 		
 		<div class="input-dropdown">
+            <label for="userRole">Account Type</label>
             <select id="userRole">
                 <option value="" disabled selected hidden>Select</option>
                 <option value="Seller">Seller</option>
                 <option value="Buyer">Buyer</option>
                 <option value="Admin">Admin</option>
             </select>
-            <label for="userRole">Account Type</label>
             <span class="error-text" id="userRoleErr"></span>
         </div>
 		<br>

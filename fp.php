@@ -13,7 +13,6 @@
     </head>
     <body>
     <?php
-        
         $error = "";
        
         if ($_SERVER["REQUEST_METHOD"] == "POST") {

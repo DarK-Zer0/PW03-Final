@@ -61,11 +61,11 @@ function register() {
 	
 	resetErrors();
 	
-	var username = document.querySelector("#username").value;
-    var email = document.querySelector("#email").value;
-    var password = document.querySelector("#password").value;
-    var confirmPassword = document.querySelector("#confirmPassword").value;
-    var acceptTerms = document.querySelector("#acceptTerms").checked; // True or false
+  var username = document.querySelector("#username").value,
+    email = document.querySelector("#email").value,
+    password = document.querySelector("#password").value,
+    confirmPassword = document.querySelector("#confirmPassword").value,
+    acceptTerms = document.querySelector("#acceptTerms").checked; // True or false
 	
     // Defining error variables with a default value
     var usernameErr = emailErr = passwordErr = confirmPasswordErr = acceptTermsErr = passwordMatchErr = true;
