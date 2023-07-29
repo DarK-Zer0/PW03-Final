@@ -133,7 +133,9 @@ function register() {
 		console.log("One or more register errors");
 		return false;
 	} else {
-    console.log('Sign up');
+	// Calls the saveData function
+    console.log('Sign up function called');
+	saveData();
 	
 	// Redirects to the login page.
 	window.location.href = "login.php";
@@ -218,6 +220,12 @@ closeButtons.forEach((button) => {
 
 
 
+
+
+
+function saveData()	{
+
+}
 
 
 
