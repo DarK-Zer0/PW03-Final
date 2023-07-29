@@ -60,14 +60,6 @@ function register() {
     var confirmPassword = document.querySelector("#confirmPassword").value;
     var acceptTerms = document.querySelector("#acceptTerms").checked; // True or false
 	
-	console.log(!username);
-	console.log(!email );
-	console.log(!password );
-	console.log(!confirmPassword );
-	console.log(!acceptTerms);
-		
-
-	
     // Defining error variables with a default value
     var usernameErr = emailErr = passwordErr = confirmPasswordErr = acceptTermsErr = passwordMatchErr = true;
 	
@@ -102,7 +94,7 @@ function register() {
 		passwordErr = false;	
 	}
 	
-	// Validate confirmPasswordErr
+	// Validate confirmPasswordErr and passwordMatchErr
     if(confirmPassword == "") {
         printError("confirmPasswordErr", "Please confirm your password");
 	} else if (confirmPassword == password) {
@@ -120,14 +112,6 @@ function register() {
 		printError("acceptTermsErr", "You must accept the terms to register");
 	}
 	
-	console.log("Before the || stuff");
-	console.log(usernameErr);
-	console.log(emailErr);
-	console.log(passwordErr);
-	console.log(confirmPasswordErr);
-	console.log(acceptTermsErr);
-	console.log(passwordMatchErr);
-	console.log(userRoleErr);
 		
 	if((usernameErr || emailErr || passwordErr || confirmPasswordErr || acceptTermsErr || passwordMatchErr || userRoleErr) === true)	{
 		console.log("One or more register errors");
