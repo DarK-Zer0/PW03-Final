@@ -226,3 +226,46 @@ body#login {
     border-radius: 10px;
     cursor: pointer;
 }
+
+/* Buyer Dashboard Styles */
+body#buyerDash {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f0f0f0;
+}
+#buyerDash .search-container {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+}
+#buyerDash .search-input {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px 0 0 4px;
+	width: 300px;
+}
+#buyerDash .search-button {
+	padding: 8px 20px;
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	border-radius: 0 4px 4px 0;
+	cursor: pointer;
+}
+#buyerDash .popup {
+	position: absolute;
+	top: 130px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px;
+	background-color: #4CAF50;
+	color: #fff;
+	border-radius: 8px;
+	z-index: 9999;
+}

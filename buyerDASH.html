@@ -4,52 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centered Search Bar</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .search-container {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 4px;
-        }
-        .search-input {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px 0 0 4px;
-            width: 300px;
-        }
-        .search-button {
-            padding: 8px 20px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-        }
-        /* Style for the pop-up window */
-        .popup {
-            position: absolute;
-            top: 130px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
-            background-color: #4CAF50;
-            color: #fff;
-            border-radius: 8px;
-            z-index: 9999;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body id="buyerDash">
     <div class="search-container">
         <input type="text" class="search-input" placeholder="Search for your dream home">
         <button type="submit" class="search-button">Search</button>
