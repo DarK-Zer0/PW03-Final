@@ -30,11 +30,6 @@ function setCCImage(ccNumber) {
     ccImgContainer.style.backgroundImage = ccImgs[ccImage];
 }
 
-//Delete
-//Get inputs from register form
-//function getElementById(id) {
-//    return document.getElementById(id);
-//}
 
 // Print error for the register page
 function printError(elementId, message) {
@@ -43,9 +38,22 @@ function printError(elementId, message) {
     errorElement.style.display = 'block';
 }
 
+// Reset the errortexts upon hitting register: errors are added after.
+function resetErrors() {
+  resetErrorText("usernameErr");
+  resetErrorText("emailErr");
+  resetErrorText("passwordErr");
+  resetErrorText("confirmPasswordErr");
+  resetErrorText("acceptTermsErr");
+  resetErrorText("passwordMatchErr");
+  resetErrorText("userRoleErr");
+}
+
 // Register page button
 function register() {
-
+	
+	resetErrors();
+	
 	var username = document.querySelector("#username").value;
     var email = document.querySelector("#email").value;
     var password = document.querySelector("#password").value;
@@ -58,18 +66,7 @@ function register() {
 	console.log(!confirmPassword );
 	console.log(!acceptTerms);
 		
-	
-	// DEBUG
-	// Check if the elements are found before accessing their properties
-    if (!username || !email || !password || !confirmPassword || !acceptTerms) {
-		console.log(username);
-		console.log(email);
-		console.log(password);
-		console.log(confirmPassword);
-		console.log(acceptTerms);
-        console.error("One or more elements not found in the DOM.");
-        return;
-    }
+
 	
     // Defining error variables with a default value
     var usernameErr = emailErr = passwordErr = confirmPasswordErr = acceptTermsErr = passwordMatchErr = true;

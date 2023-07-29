@@ -7,12 +7,7 @@
         <link rel="stylesheet" href="./styles.css">
         <script src="./scripts.js"></script>
     </head>
-    <body id="signup">
-        <!-- Return Home Button -->
-        <div id="home">
-            <a href="./index.html"><img src="./img/logo.png" alt="Propex"></a>
-        </div>
-		<!-- Registration Container -->
+    <body>
 		<div class="logsign-box">
 			<h1 class="logsign-head">Register</h1>
 			<p class="logsign-body">Fill in the form to complete your account.</p>
@@ -50,7 +45,7 @@
                 <option value="Admin">Admin</option>
             </select>
             <label for="userRole">Account Type</label>
-            <span id="userRoleErr"></span>
+            <span class="error-text" id="userRoleErr"></span>
         </div>
 		<br>
         <div class="input-check">
