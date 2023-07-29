@@ -8,6 +8,11 @@
         <script src="./scripts.js"></script>
     </head>
     <body id="signup">
+        <!-- Return Home Button -->
+        <div id="home">
+            <a href="./index.html"><img src="./img/logo.png" alt="Propex"></a>
+        </div>
+		<!-- Form -->
 		<div class="logsign-box">
 			<h1 class="logsign-head">Register</h1>
 			<p class="logsign-body">Fill in the form to complete your account.</p>

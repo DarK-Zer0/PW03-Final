@@ -71,16 +71,14 @@ function register() {
     var usernameErr = emailErr = passwordErr = confirmPasswordErr = acceptTermsErr = passwordMatchErr = true;
 	
 	// Validate User Role
-	
 	const userRole = document.querySelector("#userRole").value;
-    if (userRole === "Select") {
-        printError("userRoleErr", "Please select a role");
-        userRoleErr = true;
-    } else {
-        userRoleErr = false;
-    }
-	
-	
+  if (userRole === "Select") {
+      printError("userRoleErr", "Please select a role");
+      userRoleErr = true;
+  } else {
+      userRoleErr = false;
+  }
+
 	// Validate username
     if(username == "") {
         printError("usernameErr", "Please enter your username");
@@ -124,12 +122,13 @@ function register() {
 		console.log("One or more register errors");
 		return false;
 	} else {
-	// Calls the saveData function
-    console.log('Sign up function called');
-	saveData();
+    console.log('Sign up successful');
+	  // Calls the saveData function
+    const userData = [username, email, password, userRole];
+    saveData(userData);
 	
-	// Redirects to the login page.
-	window.location.href = "login.php";
+    // Redirects to the login page.
+    window.location.href = "login.php";
 	}
 }
 
@@ -180,13 +179,8 @@ closeButtons.forEach((button) => {
   });
 });
 
-
-
-
-
-
-
-function saveData()	{
+// Saves signup data to database
+function saveData(userData)	{
 
 }
 
