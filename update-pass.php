@@ -10,6 +10,17 @@
         <link rel="icon" href="./img/icon.jpg">
         <link rel="stylesheet" href="./login-styles.css">
         <script src="./scripts.js"></script>
+        <style>
+            .form p{
+                margin-top:0;
+                padding: 5px;
+            }
+
+            .form button{
+                margin-bottom: 10px;
+            }
+
+            </style>
     </head>
     <body>
     <?php
@@ -54,7 +65,14 @@
            <img src="./img/login.jpg" alt="login-img" >  </img>
            <p> Login </p>
         </div>
-    </a>
+        </a>
+
+        <a href= "sign.php">
+        <div class="left-container"> 
+            <img src="./img/register.png" alt="register-img" >  </img>
+            <p> Register </p>
+        </div>
+       </a>
     </div> 
     <div class="login-container">
         
@@ -67,7 +85,7 @@
             <input type="password" id="password" name="password" placeholder="Password" required>
             </label>
             
-            <button type="submit">Submit</button>
+            <button style= "margin-left: 10px; align-self: flex-start; "type="submit">Submit</button>
 
            
         </form>
