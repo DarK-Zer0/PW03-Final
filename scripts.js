@@ -38,6 +38,13 @@ function printError(elementId, message) {
     errorElement.style.display = 'block';
 }
 
+// Resets error text
+function resetErrorText(errorId) {
+    const errorText = document.getElementById(errorId);
+    errorText.textContent = '';
+    errorText.style.display = 'none';
+}
+
 // Reset the errortexts upon hitting register: errors are added after.
 function resetErrors() {
   resetErrorText("usernameErr");
@@ -126,20 +133,6 @@ function register() {
 	}
 }
 
-// Shows error text under the corresponding line
-function showErrorText(errorId, errorMessage) {
-    const errorText = document.getElementById(errorId);
-    errorText.textContent = errorMessage;
-    errorText.style.display = 'block';
-}
-
-// Resets error text
-function resetErrorText(errorId) {
-    const errorText = document.getElementById(errorId);
-    errorText.textContent = '';
-    errorText.style.display = 'none';
-}
-
 // Popup function for Terms of Use and Privacy Policy
 
 function showPopup(popupType) {
@@ -176,21 +169,7 @@ function showPrivacy()	{
 
 const popupLinks = document.querySelectorAll('.popup-link');
 
-popupLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    const popupType = link.getAttribute('data-popup');
-	
-	// Hide any currently displayed popup
-	const displayedPopup = document.querySelector('.popup-displayed');
-    if (displayedPopup) {
-      displayedPopup.classList.add('popup-hidden');
-      displayedPopup.classList.remove('popup-displayed');
-    }
-	
-    showPopup(popupType);
-  });
-});
+
 
 const closeButtons = document.querySelectorAll('.close-button');
 
