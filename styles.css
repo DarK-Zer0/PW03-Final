@@ -98,14 +98,22 @@ body	{
 }
 
 /* -----SHARED Styles----- */
-/* #home {
+body#login, body#signup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	transform: translate(-50%, -50%);
 	display: flex;
-	justify-content: center;
-	margin-top: 20px;
-} */
+	flex-direction: column;
+	align-items: center;
+}
 
 /* -----INDEX Styles----- */
 body#index {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	font-size: 20px;
 	background-color: lightyellow;
 }
@@ -151,17 +159,7 @@ body#index {
 	left: 16px;
 }
 
-/* -----LOGIN Styles----- */
-body#login, body#signup {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	width: 50%;
-	transform: translate(-50%, -50%);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}  
+/* -----LOGIN Styles----- */  
 #login .main{
     display: flex;
     border: 2px solid grey;
