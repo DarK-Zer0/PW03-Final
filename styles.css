@@ -1,5 +1,5 @@
 /* -----STARTING Styles----- */
-body	{
+body {
 	font-family: "Times New Roman", serif;
 	font-size: 12pt;
 	background-color: white;
@@ -35,7 +35,7 @@ body	{
 	display: none;
 }
 
-.input-line	{
+.input-line, .input-check, .input-select	{
 	margin-bottom: 15px;
 	position: relative;
 }
@@ -57,12 +57,12 @@ body	{
 }
 
 .button	{
-	/* If we want to style the Sign-Up button */
+	background-color: green;
+	border: none;
+	color: white;
 }
 
 .input-check {
-	margin-bottom: 15px;
-	position: relative;
 	color: black;
 }
 
@@ -107,6 +107,7 @@ body#login, body#signup {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: lightyellow;
 }
 
 /* -----INDEX Styles----- */
