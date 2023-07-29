@@ -7,63 +7,52 @@
         <link rel="stylesheet" href="./styles.css">
         <script src="./scripts.js"></script>
     </head>
-    <body>
+    <body id="signup">
 		<div class="logsign-box">
 			<h1 class="logsign-head">Register</h1>
 			<p class="logsign-body">Fill in the form to complete your account.</p>
 
-			<div class="input-select">
-				<label for="input-select">Account Type</label>
-				<select required>
-					<option value="" disabled selected hidden>Account Type</option>
-					<option value="buyer">Buyer</option>
-					<option value="seller">Seller</option>
-					<option value="admin">Admin</option>
-				</select>
+			<div class="input-line">
+				<input type="text" required placeholder="" id="username" />
+				<label for="username"> Username</label>
+				<span class="error-text" id="usernameErr"></span>
 			</div>
 
-	
 			<div class="input-line">
-            <input type="text" required placeholder="" id="username" />
-            <label for="username"> Username</label>
-            <span class="error-text" id="usernameErr"></span>
-        </div>
+				<input type="text" required placeholder="" id="email" />
+				<label for="email"> Email Address</label>
+				<span class="error-text" id="emailErr"></span>
+			</div>
 
-        <div class="input-line">
-            <input type="text" required placeholder="" id="email" />
-            <label for="email"> Email Address</label>
-            <span class="error-text" id="emailErr"></span>
-        </div>
+			<div class="input-line">
+				<input type="text" required placeholder="" id="password" />
+				<label for="password"> Password</label>
+				<span class="error-text" id="passwordErr"></span>
+			</div>
 
-        <div class="input-line">
-            <input type="text" required placeholder="" id="password" />
-            <label for="password"> Password</label>
-            <span class="error-text" id="passwordErr"></span>
-        </div>
-
-        <div class="input-line">
-            <input type="text" required placeholder="" id="confirmPassword" />
-            <label for="confirmPassword"> Confirm Password</label>
-            <span class="error-text" id="confirmPasswordErr"></span>
-			<span class="error-text" id="passwordMatchErr"></span>
-        </div>
-		
-		<div class="input-dropdown">
-            <label for="userRole">Account Type</label>
-            <select id="userRole">
-                <option value="" disabled selected hidden>Select</option>
-                <option value="Seller">Seller</option>
-                <option value="Buyer">Buyer</option>
-                <option value="Admin">Admin</option>
-            </select>
-            <span class="error-text" id="userRoleErr"></span>
-        </div>
-		<br>
-        <div class="input-check">
-            <input type="checkbox" id="acceptTerms" />
-            <label for="acceptTerms">I accept the <a href="#" class="popup-link" data-popup="terms" onclick="showTerms()">Terms of Use</a> and <a href="#" class="popup-link" data-popup="privacy" onclick="showPrivacy()">Privacy Policy</a></label>
-            <span class="error-text" id="acceptTermsErr"></span>
-        </div>
+			<div class="input-line">
+				<input type="text" required placeholder="" id="confirmPassword" />
+				<label for="confirmPassword"> Confirm Password</label>
+				<span class="error-text" id="confirmPasswordErr"></span>
+				<span class="error-text" id="passwordMatchErr"></span>
+			</div>
+			
+			<div class="input-dropdown">
+				<label for="userRole">Account Type</label>
+				<select id="userRole">
+					<option value="" disabled selected hidden>Select</option>
+					<option value="Seller">Seller</option>
+					<option value="Buyer">Buyer</option>
+					<option value="Admin">Admin</option>
+				</select>
+				<span class="error-text" id="userRoleErr"></span>
+			</div>
+			<br>
+			<div class="input-check">
+				<input type="checkbox" id="acceptTerms" />
+				<label for="acceptTerms">I accept the <a href="#" class="popup-link" data-popup="terms" onclick="showTerms()">Terms of Use</a> and <a href="#" class="popup-link" data-popup="privacy" onclick="showPrivacy()">Privacy Policy</a></label>
+				<span class="error-text" id="acceptTermsErr"></span>
+			</div>
 			
 			
 			<div class="button">
