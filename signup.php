@@ -39,7 +39,7 @@
 		
 		<div class="input-dropdown">
             <select id="userRole">
-                <option value="Select">Select</option>
+                <option value="" disabled selected hidden>Select</option>
                 <option value="Seller">Seller</option>
                 <option value="Buyer">Buyer</option>
                 <option value="Admin">Admin</option>
