@@ -134,7 +134,9 @@ function register() {
 		return false;
 	} else {
     console.log('Sign up');
-    // TO DO: Add actual Sign-up functionality here.
+	
+	// Redirects to the login page.
+	window.location.href = "login.php";
 	}
 }
 
@@ -212,6 +214,7 @@ closeButtons.forEach((button) => {
     hidePopup(popupType);
   });
 });
+
 
 
 
