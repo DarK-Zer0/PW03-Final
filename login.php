@@ -1,5 +1,4 @@
 <?php
-    
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -8,10 +7,10 @@
         <title>Propex</title>
         <meta charset="utf-8">
         <link rel="icon" href="./img/icon.jpg">
-        <link rel="stylesheet" href="./login-styles.css">
+        <link rel="stylesheet" href="./styles.css">
         <script src="./scripts.js"></script>
     </head>
-    <body>
+    <body id="login">
     <?php
         
         $error = "";
