@@ -11,6 +11,17 @@
 		<div class="logsign-box">
 			<h1 class="logsign-head">Register</h1>
 			<p class="logsign-body">Fill in the form to complete your account.</p>
+
+			<div class="input-select">
+				<label for="input-select">Account Type</label>
+				<select required>
+					<option value="" disabled selected hidden>Account Type</option>
+					<option value="buyer">Buyer</option>
+					<option value="seller">Seller</option>
+					<option value="admin">Admin</option>
+				</select>
+			</div>
+
 	
 			<div class="input-line">
             <input type="text" required placeholder="" id="username" />

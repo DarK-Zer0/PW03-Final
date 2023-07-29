@@ -1,4 +1,5 @@
-.body	{
+/* -----STARTING Styles----- */
+body {
 	font-family: "Times New Roman", serif;
 	font-size: 12pt;
 	background-color: white;
@@ -35,7 +36,7 @@
 	display: none;
 }
 
-.input-line	{
+.input-line, .input-check, .input-select	{
 	margin-bottom: 15px;
 	position: relative;
 }
@@ -57,12 +58,12 @@
 }
 
 .button	{
-	/* If we want to style the Sign-Up button */
+	background-color: green;
+	border: none;
+	color: white;
 }
 
 .input-check {
-	margin-bottom: 15px;
-	position: relative;
 	color: black;
 }
 
@@ -97,9 +98,24 @@
 	margin-top: 10px;
 }
 
+/* -----SHARED Styles----- */
+body#login, body#signup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: lightyellow;
+}
 
-/* -----Index Styles----- */
-#index {
+/* -----INDEX Styles----- */
+body#index {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	font-size: 20px;
 	background-color: lightyellow;
 }
@@ -147,4 +163,147 @@
 	position: absolute;
 	top: 8px;
 	left: 16px;
+}
+
+/* -----LOGIN Styles----- */  
+#login .main{
+    display: flex;
+    border: 2px solid grey;
+    border-radius: 10px;
+    max-width: fit-content;
+}
+
+#login .error{
+    color: red;
+}
+
+#login #container {
+	width: 50%;
+}
+
+#login .left-column {
+    display:flex;
+    flex-direction: column;
+    border-right: 1px solid grey;
+    max-width: fit-content;
+    text-align: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: black;
+}
+#login .left-column a .left-container p {
+    margin-top: 0;
+    text-decoration: none;
+    color: black;
+}
+#login .left-column a{
+    text-decoration: none;
+}
+#login .left-column img{
+    align-self: center;
+    padding-top: 15%;
+    height: 30px;
+    width: 35px;
+}
+
+#login .login-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#login .login-container h2{
+	text-align: center;
+}
+#login .login-container a{
+    padding: 10px;
+    align-self: center;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+#login .login-container p {
+	padding: 10px;
+}
+
+#login .left-container{
+    height: 100px;
+    width: 150px;
+}
+#login .left-container:hover{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#login .form{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#login .form label{
+    padding: 10px;
+}
+#login .form input[type="text"]{
+    height: 25px;
+ width: 250px;
+}
+#login .form input[type="password"] {
+    height: 25px;
+    width: 250px;
+}
+#login .form button[type="submit"] {
+    background-color: green;
+    align-self: center;
+    color: white;
+    width: 255px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 56px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+/* BUYER DASHBOARD Styles */
+body#buyerDash {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f0f0f0;
+}
+#buyerDash .search-container {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+}
+#buyerDash .search-input {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px 0 0 4px;
+	width: 300px;
+}
+#buyerDash .search-button {
+	padding: 8px 20px;
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	border-radius: 0 4px 4px 0;
+	cursor: pointer;
+}
+#buyerDash .popup {
+	position: absolute;
+	top: 130px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px;
+	background-color: #4CAF50;
+	color: #fff;
+	border-radius: 8px;
+	z-index: 9999;
 }
