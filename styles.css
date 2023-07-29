@@ -1,4 +1,5 @@
-.body	{
+/* -----STARTING Styles----- */
+body	{
 	font-family: "Times New Roman", serif;
 	font-size: 12pt;
 	background-color: white;
@@ -12,7 +13,6 @@
 	flex-direction: column;
 	align-items: center;
 	margin: 0 auto;
-	margin-top: 150px;
 	border-left: 5px solid #66CDAA;
 	border-right: 5px solid #66CDAA;
 	border-radius: 5px;
@@ -97,8 +97,14 @@
 	margin-top: 10px;
 }
 
+/* -----SHARED Styles----- */
+/* #home {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+} */
 
-/* -----Index Styles----- */
+/* -----INDEX Styles----- */
 body#index {
 	font-size: 20px;
 	background-color: lightyellow;
@@ -116,10 +122,6 @@ body#index {
 	width: 50%;
 	text-align: center;
 	margin: 0 auto;
-}
-#intro #logo {
-	width: 100%;
-	height: 160px;
 }
 #index button {
 	background-color: green;
@@ -149,24 +151,32 @@ body#index {
 	left: 16px;
 }
 
-/* -----Login Styles----- */
-body#login {
-    position: fixed;
-    top: 25%;
-    left:32%;
-    right:20%;
-
-}
+/* -----LOGIN Styles----- */
+body#login, body#signup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}  
 #login .main{
     display: flex;
-    justify-content: center;
     border: 2px solid grey;
     border-radius: 10px;
     max-width: fit-content;
 }
+
 #login .error{
     color: red;
 }
+
+#login #container {
+	width: 50%;
+}
+
 #login .left-column {
     display:flex;
     flex-direction: column;
@@ -177,54 +187,63 @@ body#login {
     text-decoration: none;
     color: black;
 }
-
-#login .left-column a #login .left-container p {
+#login .left-column a .left-container p {
     margin-top: 0;
     text-decoration: none;
     color: black;
 }
-
 #login .left-column a{
     text-decoration: none;
 }
-
 #login .left-column img{
     align-self: center;
-    padding-top: 5px;
+    padding-top: 15%;
     height: 30px;
     width: 35px;
 }
-
-
 
 #login .login-container{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
+#login .login-container h2{
+	text-align: center;
+}
+#login .login-container a{
+    padding: 10px;
+    align-self: center;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+#login .login-container p {
+	padding: 10px;
+}
 
+#login .left-container{
+    height: 100px;
+    width: 150px;
+}
+#login .left-container:hover{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 #login .form{
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
-
 #login .form label{
     padding: 10px;
 }
-
-
-
-#login .login-container h2{
- text-align: center;
-}
-
 #login .form input[type="text"]{
     height: 25px;
  width: 250px;
 }
-
 #login .form input[type="password"] {
     height: 25px;
     width: 250px;
@@ -240,30 +259,9 @@ body#login {
     padding-top: 5px;
     padding-bottom: 20px;
     cursor: pointer;
-   
 }
 
-#login .login-container a{
-    padding: 10px;
-    align-self: center;
-    color: gray;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#login .left-container{
-    height: 100px;
-    width: 150px;
-}
-
-#login .left-container:hover{
-    background-color: green;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-/* Buyer Dashboard Styles */
+/* BUYER DASHBOARD Styles */
 body#buyerDash {
 	display: flex;
 	justify-content: center;
