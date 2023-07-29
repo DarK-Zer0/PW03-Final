@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Search Bar</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body id="buyerDash">
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search for your dream home">
+        <button type="submit" class="search-button">Search</button>
+    </div>
+
+    <script>
+        // Function to create and show the pop-up window
+        function showPopup() {
+            const popup = document.createElement('div');
+            popup.classList.add('popup');
+            popup.textContent = 'Welcome! Thank you for choosing us.';
+            document.body.appendChild(popup);
+            setTimeout(() => {
+                popup.remove(); // Remove the pop-up after 6 seconds
+            }, 4000);
+        }
+
+        // Call the showPopup function when the page loads
+        window.onload = showPopup;
+    </script>
+</body>
+</html>

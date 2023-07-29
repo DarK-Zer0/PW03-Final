@@ -1,4 +1,5 @@
 <?php
+    
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -7,10 +8,10 @@
         <title>Propex</title>
         <meta charset="utf-8">
         <link rel="icon" href="./img/icon.jpg">
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./login-styles.css">
         <script src="./scripts.js"></script>
     </head>
-    <body id="login">
+    <body>
     <?php
         
         $error = "";
@@ -22,7 +23,7 @@
             $databaseName = "realestate"; 
         
            
-            $usr_password = $_POST["password"];
+            
             $usr_name = $_POST["username"];
         
             // Connect to MYSQL Server
@@ -34,7 +35,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
          
-            $stmt = $conn->prepare("SELECT usr_name, usr_password FROM users WHERE usr_name=?");
+            $stmt = $conn->prepare("SELECT usr_name FROM users WHERE usr_name=?");
             $stmt->bind_param("s", $usr_name);
         
             $stmt->execute();
@@ -43,17 +44,17 @@
             $user = $result->fetch_assoc();
         
             if ($user) {
-                // Check if the username and password are correct
-                if ($user["usr_name"] === $usr_name && $user["usr_password"] === $usr_password) {
-                    $_SESSION["username"] = $usr_name;
-                    $_SESSION["password"] = $usr_password;
-                    header("Location: buyer_dashboard.php");
+                // Check if the username is correct
+                if ($user["usr_name"] === $usr_name ) {
+                   
+                  
+                    header("Location: update-pass.php");
                     exit;
                 } else {
                     $error = "Incorrect username or password";
                 }
             } else {
-                $error = "Incorrect username or password";
+                $error = "Incorrect username ";
             } 
         }
     ?>
@@ -73,28 +74,20 @@
         </div>
     </a>
 
-    <a href= "fp.php">
-        <div class="left-container">
-            <img src="./img/forgotpass.png" alt="forgot_password-img" >  </img>
-            <p> Forgot Password? </p>
-        </div>
-    </a>
+    
     </div> 
     <div class="login-container">
-        <h2>Login Here</h2>
+        
         <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <span class="error"><?php echo $error; ?></span><br>
+            <p> Please Enter your username: </p>
             <label for="username">Username
             <input type="text" id="username" name="username" placeholder="Email" required>
             </label>
-            
-            <label for="password">Password
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            </label>
-            
-            <button type="submit">Login</button>
-
            
+            <button type="submit">Submit</button>
+
+            
         </form>
     </div>
 

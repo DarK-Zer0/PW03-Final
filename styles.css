@@ -99,7 +99,7 @@
 
 
 /* -----Index Styles----- */
-#index {
+body#index {
 	font-size: 20px;
 	background-color: lightyellow;
 }
@@ -147,4 +147,161 @@
 	position: absolute;
 	top: 8px;
 	left: 16px;
+}
+
+/* -----Login Styles----- */
+body#login {
+    position: fixed;
+    top: 25%;
+    left:32%;
+    right:20%;
+
+}
+#login .main{
+    display: flex;
+    justify-content: center;
+    border: 2px solid grey;
+    border-radius: 10px;
+    max-width: fit-content;
+}
+#login .error{
+    color: red;
+}
+#login .left-column {
+    display:flex;
+    flex-direction: column;
+    border-right: 1px solid grey;
+    max-width: fit-content;
+    text-align: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: black;
+}
+
+#login .left-column a #login .left-container p {
+    margin-top: 0;
+    text-decoration: none;
+    color: black;
+}
+
+#login .left-column a{
+    text-decoration: none;
+}
+
+#login .left-column img{
+    align-self: center;
+    padding-top: 5px;
+    height: 30px;
+    width: 35px;
+}
+
+
+
+#login .login-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+#login .form{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#login .form label{
+    padding: 10px;
+}
+
+
+
+#login .login-container h2{
+ text-align: center;
+}
+
+#login .form input[type="text"]{
+    height: 25px;
+ width: 250px;
+}
+
+#login .form input[type="password"] {
+    height: 25px;
+    width: 250px;
+}
+#login .form button[type="submit"] {
+    background-color: green;
+    align-self: center;
+    color: white;
+    width: 255px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 56px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    cursor: pointer;
+   
+}
+
+#login .login-container a{
+    padding: 10px;
+    align-self: center;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#login .left-container{
+    height: 100px;
+    width: 150px;
+}
+
+#login .left-container:hover{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Buyer Dashboard Styles */
+body#buyerDash {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f0f0f0;
+}
+#buyerDash .search-container {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+}
+#buyerDash .search-input {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px 0 0 4px;
+	width: 300px;
+}
+#buyerDash .search-button {
+	padding: 8px 20px;
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	border-radius: 0 4px 4px 0;
+	cursor: pointer;
+}
+#buyerDash .popup {
+	position: absolute;
+	top: 130px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px;
+	background-color: #4CAF50;
+	color: #fff;
+	border-radius: 8px;
+	z-index: 9999;
 }
