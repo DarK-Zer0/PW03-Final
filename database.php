@@ -97,7 +97,7 @@
         echo "New property created successfully";
     } else {
         echo "Error: " . $conn->error;
-    }    
+    }
 
     // Close statement and connection
     $conn->close();
