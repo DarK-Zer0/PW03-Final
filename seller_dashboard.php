@@ -23,57 +23,13 @@
     // Get the result
     $result = $stmt->get_result();
 ?>
-
-<!DOCTYPE html>
 <html>
 <head>
     <title>Housing Properties</title>
-    <style>
-        .property-box {
-            display: none;
-            position: relative; 
-            width: 400px;
-            height: 400px; 
-            background-color: #66ff99;
-            color: #006666;
-            margin: 5px;
-            padding: 5px;
-            float: left;
-            border-radius: 10px; 
-            overflow: hidden; 
-        }
-
-        .property-image {
-            display: block;
-            width: 100%; 
-            height: 200px; 
-            object-fit: cover; 
-            border-radius: 10px; 
-        }
-
-        .property-info-container {
-            background-color: white; 
-            margin-top: 5px;
-            padding: 5px;
-            border-radius: 10px; 
-        }
-
-        .property-info {
-            font-family: Arial, sans-serif; 
-        }
-
-        .property-price {
-            position: absolute; 
-            top: 5px; 
-            right: 5px; 
-            font-family: Arial, sans-serif; 
-            font-size: 20px; 
-            color: white; 
-            background-color: rgba(0, 0, 0, 0.7); 
-            padding: 5px; 
-            border-radius: 5px; 
-        }
-    </style>
+    <meta charset="utf-8">
+    <link rel="icon" href="./img/icon.jpg">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
 </head>
 <body>
     <div id="propertyContainer"></div>
