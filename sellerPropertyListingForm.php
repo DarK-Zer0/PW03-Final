@@ -64,7 +64,7 @@
     Square Footage: <input type="number" name="square_footage" required><br>
     Bedrooms: <input type="number" name="Bedrooms" required><br>
     Bathrooms: <input type="number" name="Bathrooms" required><br>
-    parking_availability: <input type="text" name="parking_availability" required><br>
+    Parking Availability: <input type="text" name="parking_availability" required><br>
     Price: <input type="number" name="price" required><br>
     Property Tax: <input type="number" name="property_tax" required><br>
     <input type="submit" value="Submit">

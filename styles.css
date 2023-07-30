@@ -163,6 +163,7 @@ body#index {
 /* -----LOGIN Styles----- */  
 #login .main{
     display: flex;
+    justify-content: center;
     border: 2px solid grey;
     border-radius: 10px;
     max-width: fit-content;
@@ -196,20 +197,20 @@ body#index {
 }
 #login .left-column img{
     align-self: center;
-    padding-top: 15%;
+    padding-top: 5px;
     height: 30px;
     width: 35px;
 }
 
-#login .login-container{
+#login .login-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
-#login .login-container h2{
+#login .login-container h2 {
 	text-align: center;
 }
-#login .login-container a{
+#login .login-container a {
     padding: 10px;
     align-self: center;
     color: gray;
@@ -220,28 +221,28 @@ body#index {
 	padding: 10px;
 }
 
-#login .left-container{
+#login .left-container {
     height: 100px;
     width: 150px;
 }
-#login .left-container:hover{
+#login .left-container:hover {
     background-color: green;
     color: white;
     border-radius: 10px;
     cursor: pointer;
 }
 
-#login .form{
+#login .form {
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
-#login .form label{
+#login .form label {
     padding: 10px;
 }
-#login .form input[type="text"]{
+#login .form input[type="text"] {
     height: 25px;
- width: 250px;
+	width: 250px;
 }
 #login .form input[type="password"] {
     height: 25px;
@@ -305,7 +306,7 @@ body#buyerDash {
 
 /* -----SELLER DASHBOARD Styles----- */
 #propertyContainer img {
-	width: 20vh
+	width: 20vh;
 }
 
 .property-box {
