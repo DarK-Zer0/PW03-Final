@@ -304,6 +304,10 @@ body#buyerDash {
 }
 
 /* -----SELLER DASHBOARD Styles----- */
+#propertyContainer img {
+	width: 20vh
+}
+
 .property-box {
 	position: relative; 
 	width: 400px;

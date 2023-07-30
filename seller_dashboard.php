@@ -52,7 +52,7 @@
             imageLink.href = "sellerPropertyListingForm.php"; // Replace with the URL you want to redirect to
 
             let image = document.createElement("img");
-            image.src = "./img/login.jpg"; // Replace with the path to your image
+            image.src = "./img/plus.jpg"; // Replace with the path to your image
             image.alt = "No properties listed. Click to add.";
 
     // Append the image to the link
