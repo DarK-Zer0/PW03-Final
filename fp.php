@@ -16,9 +16,9 @@
        
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $servername = "localhost";
-            $db_username = "root";
-            $db_password = "";
-            $databaseName = "realestate"; 
+            $db_username = "imeyers";
+            $db_password = "imeyers";
+            $databaseName = "imeyers";
         
            
             
@@ -65,7 +65,7 @@
         </div>
     </a>
 
-    <a href= "sign.php">
+    <a href= "sign.html">
         <div class="left-container"> 
             <img src="./img/register.png" alt="register-img" >  </img>
             <p> Register </p>

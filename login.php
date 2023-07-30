@@ -28,11 +28,11 @@
                     die("Connection failed: " . $conn->connect_error);
                 } 
             
-                $usr_password = $_POST["password"];
-                $usr_name = $_POST["username"];
+                $password = $_POST["password"];
+                $username = $_POST["username"];
             
-                $stmt = $conn->prepare("SELECT usr_name, usr_password FROM users WHERE usr_name=?");
-                $stmt->bind_param("s", $usr_name);
+                $stmt = $conn->prepare("SELECT username, password FROM users WHERE username=?");
+                $stmt->bind_param("s", $username);
             
                 $stmt->execute();
             
@@ -41,10 +41,10 @@
             
                 if ($user) {
                     // Check if the username and password are correct
-                    if ($user["usr_name"] === $usr_name && $user["usr_password"] === $usr_password) {
-                        $_SESSION["username"] = $usr_name;
-                        $_SESSION["password"] = $usr_password;
-                        header("Location: buyer_dashboard.php"); // TODO: Create a seller dashboard
+                    if ($user["username"] == $username && $user["password"] == $password) {
+                        $_SESSION["username"] = $username;
+                        $_SESSION["password"] = $password;
+                        header("Location: seller_dashboard.php");
                         exit;
                     } else {
                         $error = "Incorrect username or password";
@@ -69,7 +69,7 @@
                 </a>
 
                 <!-- Sign Up Link -->
-                <a href= "signup.php">
+                <a href= "signup.html">
                     <div class="left-container"> 
                         <img src="./img/register.png" alt="register-img" >  </img>
                         <p> Register </p>
@@ -90,7 +90,7 @@
                 <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <span class="error"><?php echo $error; ?></span><br>
                     <label for="username">Username
-                        <input type="text" id="username" name="username" placeholder="Email" required>
+                        <input type="text" id="username" name="username" placeholder="Username" required>
                     </label>
 
                     <label for="password">Password
