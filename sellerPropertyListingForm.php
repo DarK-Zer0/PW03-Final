@@ -56,9 +56,6 @@
 
   <span class="error"><?php echo $error; ?></span><br>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-    
-    User Name: <input type="text" name="username" required><br>
-    Property ID: <input type="text" name="id" required><br>
     Location: <input type="text" name="location" required><br>
     Year: <input type="number" name="year" required><br>
     Square Footage: <input type="number" name="square_footage" required><br>
