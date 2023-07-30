@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     // Database connection
     $servername = "localhost";
     $db_username = "imeyers";
@@ -47,19 +49,16 @@
             echo json_encode($properties);
         ?>;
         
+        let imageLink = document.createElement("a");
+        imageLink.href = "sellerPropertyListingForm.php"; // Replace with the URL you want to redirect to
+        let image = document.createElement("img");
+        image.src = "./img/plus.jpg"; // Replace with the path to your image
+        image.alt = "Click to add a property.";
+        // Append the image to the link
+        imageLink.appendChild(image);
+        // Append the link to the property container
+        propertyContainer.appendChild(imageLink);
         if (properties.length === 0) {
-            let imageLink = document.createElement("a");
-            imageLink.href = "sellerPropertyListingForm.php"; // Replace with the URL you want to redirect to
-
-            let image = document.createElement("img");
-            image.src = "./img/plus.jpg"; // Replace with the path to your image
-            image.alt = "No properties listed. Click to add.";
-
-    // Append the image to the link
-    imageLink.appendChild(image);
-
-    // Append the link to the property container
-    propertyContainer.appendChild(imageLink);
             // If no properties listed, display a message
             let message = document.createElement("p");
             message.textContent = "Please click on the plus sign to add properties";
