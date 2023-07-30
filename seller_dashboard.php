@@ -70,6 +70,12 @@
                 let propertyBox = document.createElement("div");
                 propertyBox.classList.add("property-box");
 
+                // Create the property price paragraph.
+                let price = document.createElement("p");
+                price.classList.add("property-price");
+                price.innerText = property.price;
+                propertyBox.appendChild(price);
+
                 // Create the property info container div.
                 let infoContainer = document.createElement("div");
                 infoContainer.classList.add("property-info-container");
@@ -79,10 +85,6 @@
                 info.classList.add("property-info");
 
                 // Create and append the property information paragraphs.
-                let price = document.createElement("p");
-                price.innerHTML = "<strong>Bathrooms:</strong> " + property.price;
-                info.appendChild(price);
-
                 let location = document.createElement("p");
                 location.innerHTML = "<strong>Location:</strong> " + property.location;
                 info.appendChild(location);
