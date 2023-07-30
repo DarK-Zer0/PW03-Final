@@ -30,7 +30,6 @@ function setCCImage(ccNumber) {
     ccImgContainer.style.backgroundImage = ccImgs[ccImage];
 }
 
-
 // Print error for the register page
 function printError(elementId, message) {
     const errorElement = document.getElementById(elementId);
@@ -61,10 +60,10 @@ function register() {
 	
 	resetErrors();
 	
-  var username = document.querySelector("#username").value,
-    email = document.querySelector("#email").value,
-    password = document.querySelector("#password").value,
-    confirmPassword = document.querySelector("#confirmPassword").value,
+  var username = document.getElementById('username').value,
+    email = document.getElementById('email').value,
+    password = document.getElementById('password').value,
+    confirmPassword = document.getElementById('confirmPassword').value,
     acceptTerms = document.querySelector("#acceptTerms").checked; // True or false
 	
     // Defining error variables with a default value
@@ -133,7 +132,6 @@ function register() {
 }
 
 // Popup function for Terms of Use and Privacy Policy
-
 function showPopup(popupType) {
   const popupElement = document.getElementById(`popup-${popupType}`);
   popupElement.classList.remove('popup-hidden');
@@ -167,9 +165,6 @@ function showPrivacy()	{
 }
 
 const popupLinks = document.querySelectorAll('.popup-link');
-
-
-
 const closeButtons = document.querySelectorAll('.close-button');
 
 closeButtons.forEach((button) => {
@@ -179,9 +174,31 @@ closeButtons.forEach((button) => {
   });
 });
 
+// Creates the database table
+function generateDatabase() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', './database.php', true);
+  xhr.onload = function() {
+    if (this.status == 200) {
+      console.log('database.php script run successfully');
+    }
+  };
+  xhr.send();
+}
+
 // Saves signup data to database
 function saveData(userData)	{
-
+  // userData[x]: [0] = username, [1] = email, [2] = password, [3] = account type
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', './signup.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = function() {
+    if (this.status == 200) {
+      console.log('signup.php script run successfully');
+    }
+  };
+  var data = 'userData=' + JSON.stringify(userData);
+  xhr.send(data);
 }
 
 

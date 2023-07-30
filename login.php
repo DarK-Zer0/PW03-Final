@@ -1,7 +1,6 @@
 <?php
 	session_start();
 ?>
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Propex</title>
@@ -16,22 +15,21 @@
         
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $servername = "localhost";
-                $db_username = "root";
-                $db_password = "";
-                $databaseName = "realestate"; 
-            
-            
-                $usr_password = $_POST["password"];
-                $usr_name = $_POST["username"];
+                $db_username = "imeyers";
+                $db_password = "imeyers";
+                $databaseName = "imeyers";
             
                 // Connect to MYSQL Server
                 $conn = new mysqli($servername, $db_username, $db_password, $databaseName);
-            
+
                 // Check the connection
                 if ($conn->connect_error) {
                     echo "Could not connect to server \n";
                     die("Connection failed: " . $conn->connect_error);
-                }
+                } 
+            
+                $usr_password = $_POST["password"];
+                $usr_name = $_POST["username"];
             
                 $stmt = $conn->prepare("SELECT usr_name, usr_password FROM users WHERE usr_name=?");
                 $stmt->bind_param("s", $usr_name);
@@ -46,7 +44,7 @@
                     if ($user["usr_name"] === $usr_name && $user["usr_password"] === $usr_password) {
                         $_SESSION["username"] = $usr_name;
                         $_SESSION["password"] = $usr_password;
-                        header("Location: buyer_dashboard.php");
+                        header("Location: buyer_dashboard.php"); // TODO: Create a seller dashboard
                         exit;
                     } else {
                         $error = "Incorrect username or password";
