@@ -2,7 +2,6 @@
     // userData[x]: [0] = username, [1] = email, [2] = password, [3] = account type
     $userData = json_decode($_POST['userData'], true);
 
-
     $servername = "localhost";
     $db_username = "imeyers";
     $db_password = "imeyers";

@@ -15,9 +15,9 @@
 <body>
     <?php
         $servername = "localhost";
-        $db_username = "imeyers";
-        $db_password = "imeyers";
-        $databaseName = "imeyers";
+        $username = "imeyers";
+        $password = "imeyers";
+        $dbname = "imeyers";
     
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);

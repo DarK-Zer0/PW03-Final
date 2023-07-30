@@ -197,6 +197,7 @@ function saveData(userData)	{
       console.log('signup.php script run successfully');
     }
   };
+  // Converts userData into json format
   var data = 'userData=' + JSON.stringify(userData);
   xhr.send(data);
 }
