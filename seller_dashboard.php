@@ -85,6 +85,10 @@
                 info.classList.add("property-info");
 
                 // Create and append the property information paragraphs.
+                let bathrooms = document.createElement("p");
+                bathrooms.innerHTML = "<strong>Bathrooms:</strong> " + property.price;
+                info.appendChild(bathrooms);
+                
                 let location = document.createElement("p");
                 location.innerHTML = "<strong>Location:</strong> " + property.location;
                 info.appendChild(location);
