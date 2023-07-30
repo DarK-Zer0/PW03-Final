@@ -29,9 +29,9 @@
        
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $servername = "localhost";
-            $db_username = "root";
-            $db_password = "";
-            $databaseName = "realestate"; 
+            $db_username = "imeyers";
+            $db_password = "imeyers";
+            $databaseName = "imeyers";
         
            
             $usr_password = $_POST["password"];

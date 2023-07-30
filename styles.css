@@ -305,7 +305,6 @@ body#buyerDash {
 
 /* -----SELLER DASHBOARD Styles----- */
 .property-box {
-	display: none;
 	position: relative; 
 	width: 400px;
 	height: 400px; 
